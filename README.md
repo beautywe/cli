@@ -190,7 +190,7 @@ run 命令底层是调用了 gulp 任务。
 
 ## .beautywerc
 
-```json
+```
 {
     // 给 beautywe new 命令，指定自定义模板
     "templates": {
