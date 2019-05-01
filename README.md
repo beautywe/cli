@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/beautywe/cli/tree/master.svg?style=svg)](https://circleci.com/gh/beautywe/cli/tree/master)
 
-[![NPM Version](https://img.shields.io/npm/v/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli) [![NPM Downloads](https://img.shields.io/npm/dm/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@beautywe/cli.svg) [![Coverage Status](https://coveralls.io/repos/github/beautywe/cli/badge.svg)](https://coveralls.io/github/beautywe/cli)
+[![NPM Version](https://img.shields.io/npm/v/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli) [![NPM Downloads](https://img.shields.io/npm/dm/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli)
 
 ## 介绍
 
