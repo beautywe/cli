@@ -7,7 +7,7 @@ defaults: &defaults
     - image: circleci/node:8.12.0
 
 jobs:
-  build:
+  install:
     <<: *defaults
     steps:
       - checkout
@@ -19,7 +19,6 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
-      - run: npm run build:pro
 
       - save_cache:
           paths:
@@ -29,6 +28,13 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
+  
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run: npm run build:pro
 
   test:
     <<: *defaults
@@ -84,10 +90,14 @@ jobs:
 workflows:
   build-and-deploy:
     jobs:
-      - eslint
+      - build
+      - eslint:
+          requires:
+            - build
       - deploy:
           context: tokens
           requires:
+            - build
             - eslint
           filters:
             branches:
