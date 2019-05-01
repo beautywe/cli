@@ -90,14 +90,14 @@ jobs:
 workflows:
   build-and-deploy:
     jobs:
-      - build
+      - install
       - eslint:
           requires:
-            - build
+            - install
       - deploy:
           context: tokens
           requires:
-            - build
+            - install
             - eslint
           filters:
             branches:
