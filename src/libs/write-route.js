@@ -5,6 +5,7 @@
  *  3. src/app.json 文件？
  * @param {*} route
  */
+// eslint-disable-next-line no-unused-vars
 function writeRoute(route) {
     // TODO
 }

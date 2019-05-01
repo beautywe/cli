@@ -17,19 +17,25 @@
     "type": "git",
     "url": "git@gitlab.qima-inc.com:sz-web/beautywe-cli.git"
   },
-  "keywords": ["beautywe", "beautywe-cli"],
+  "keywords": [
+    "beautywe",
+    "beautywe-cli"
+  ],
   "author": "JerryC8080 (huangjerryc@gmail.com)",
   "license": "MIT",
   "dependencies": {
     "@beautywe/framework": "^0.0.1",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.7.0",
     "find-up": "^3.0.0",
     "fs-extra": "^7.0.1",
     "inquirer": "^6.2.1",
     "lodash": "^4.17.11",
     "signale": "^1.3.0",
     "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "commitizen": "^3.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0"
   }
 }
