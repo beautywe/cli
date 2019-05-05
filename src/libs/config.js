@@ -21,23 +21,24 @@ const config = {
     projectDir,
     distDir,
     appDir,
-    templates: _.defaultsDeep(userConfig.templates, {
+    writeRouteAfterCreated: _.get(userConfig, 'writeRouteAfterCreated', false),
+    templates: {
         component: {
             // 不指定，则用 beautywe-framework 默认提供的模板
-            source: undefined,
-            defaultOutput: `${appDir}/components`,
+            source: _.get(userConfig, 'templates.component.source'),
+            defaultOutput: nodePath.join(appDir, _.get(userConfig, 'templates.component.defaultOutput', 'components')),
         },
         page: {
             // 不指定，则用 beautywe-framework 默认提供的模板
-            source: undefined,
-            defaultOutput: `${appDir}/pages`,
+            source: _.get(userConfig, 'templates.page.source'),
+            defaultOutput: nodePath.join(appDir, _.get(userConfig, 'templates.page.defaultOutput', 'pages')),
         },
         plugin: {
             // 不指定，则用 beautywe-framework 默认提供的模板
-            source: undefined,
-            defaultOutput: `${appDir}/libs/plugins`,
+            source: _.get(userConfig, 'templates.plugin.source'),
+            defaultOutput: nodePath.join(appDir, _.get(userConfig, 'templates.plugin.defaultOutput', '/libs/plugins')),
         },
-    }),
+    },
 };
 
 module.exports = config;

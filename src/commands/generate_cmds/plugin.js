@@ -6,7 +6,7 @@ const _ = require('lodash');
 
 function newPlugin({ path }) {
     logger.start(`创建插件：${path}`);
-    const { baseName, pathName: targetDir } = parsePath(path, 'plugin');
+    const { baseName, pathName: targetDir } = parsePath({ name: path, type: 'plugin' });
     return templates
         .render({
             type: 'plugin',

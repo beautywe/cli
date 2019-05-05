@@ -1,4 +1,6 @@
 node_modules
 package-lock.json
 beautywe-app
-demo
+demo/**
+!demo/.beautywerc
+!demo/package.json
