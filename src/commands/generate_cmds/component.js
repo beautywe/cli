@@ -5,7 +5,7 @@ const logger = require('../../libs/logger');
 const _ = require('lodash');
 
 function newComponent({ compPath, templateSource }) {
-    const { baseName, pathName: targetDir, route } = parsePath(compPath, 'component');
+    const { baseName, pathName: targetDir, route, relativeToAppDir } = parsePath(compPath, 'component');
     const compRoute = `${route}/index`;
 
     logger.start(`创建组件：${compRoute}`);
@@ -13,8 +13,9 @@ function newComponent({ compPath, templateSource }) {
         .render({
             type: 'component',
             targetDir,
-            params: { name: baseName, route: compRoute },
+            params: { name: baseName, route: compRoute, relativeToAppDir },
             sourceDir: templateSource,
+            relativeToAppDir,
         })
         .then(result => result.forEach((item) => {
             logger.success(`生成文件：${item.targetPath.replace(config.projectDir, '')}`);

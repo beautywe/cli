@@ -9,6 +9,9 @@ const config = require('../libs/config');
  *
  * @param {*} name
  * @param {*} type
+ * @returns {string} object.baseName 目录名
+ * @returns {string} object.pathName 目录路径
+ * @returns {string} object.route 相对 appDir 的相对路径
  */
 function parsePath(name, type = 'page') {
     const { name: baseName, root } = path.parse(name);
@@ -27,6 +30,7 @@ function parsePath(name, type = 'page') {
         baseName,
         pathName,
         route: pathName.replace(config.appDir, ''),
+        relativeToAppDir: path.relative(pathName, config.appDir),
     };
 }
 

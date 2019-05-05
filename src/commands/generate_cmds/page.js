@@ -10,7 +10,7 @@ const _ = require('lodash');
  * 2. 支持写入 route 到 app.json 中
  */
 function newPage({ pagePath, templateSource }) {
-    const { baseName, pathName: targetDir, route } = parsePath(pagePath);
+    const { baseName, pathName: targetDir, route, relativeToAppDir } = parsePath(pagePath);
     const pageRoute = `${route}/index`;
 
     logger.start(`创建页面：${pageRoute}`);
@@ -18,7 +18,7 @@ function newPage({ pagePath, templateSource }) {
         .render({
             type: 'page',
             targetDir,
-            params: { name: baseName, route: pageRoute },
+            params: { name: baseName, route: pageRoute, relativeToAppDir },
             sourceDir: templateSource,
         })
         .then(result => result.forEach((item) => {

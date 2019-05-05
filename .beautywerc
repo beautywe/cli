@@ -1,0 +1,15 @@
+{
+    "templates": {
+        "component": {
+            "defaultOutput": "demo/src/components"
+        },
+        "page": {
+            "defaultOutput": "demo/src/pages"
+        },
+        "plugin": {
+            "defaultOutput": "demo/src/libs/plugins"
+        }
+    },
+    "distDir": "demo/dist",
+    "appDir": "demo/src"
+}
