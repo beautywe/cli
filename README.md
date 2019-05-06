@@ -54,7 +54,7 @@ $ beautywe new page <name|path>
  1. 如果name是绝对路径（例如name: '/some/path/myPage'），则最终生成的目录是 `{project}/some/path/myPage`。
  1. 如果name只填写了路径（例如name: '/some/path/'），则当做 '/some/path' 处理。
 
-> 其中 `{project}` 为项目目录，即 `package.json` 所在的目录
+> 其中 `{project}` 为项目目录，即 `package.json` 所在的目录    
 > 其中 `{defaultRoot}` 默认为 `app.json` 所在目录，可以通过 `.beautywerc` 中的 `defaultOutput` 来进行自定义。    
 
 
