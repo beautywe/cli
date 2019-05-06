@@ -1,0 +1,16 @@
+{
+    "templates": {
+        "component": {
+            "defaultOutput": "components"
+        },
+        "page": {
+            "defaultOutput": "pages"
+        },
+        "plugin": {
+            "defaultOutput": "libs/plugins"
+        }
+    },
+    "distDir": "dist",
+    "appDir": "src",
+    "writeRouteAfterCreated": true
+}

@@ -1,3 +1,6 @@
 .eslintrc
 .gitignore
 package-lock.json
+.beautywerc
+.templates
+demo
