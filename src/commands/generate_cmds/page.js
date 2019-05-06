@@ -6,7 +6,7 @@ const _ = require('lodash');
 const fs = require('fs-extra');
 const pathTool = require('path');
 
-function newPage({ pagePath, templateSource, subPkg }) {
+function newPage({ pagePath, templateSource, subPkg, writeRoute }) {
     let targetDir;
     let pageName;
     let pageRoute;
@@ -39,7 +39,7 @@ function newPage({ pagePath, templateSource, subPkg }) {
 
         // 写入路由
         .then(() => {
-            if (!config.writeRouteAfterCreated) return Promise.resolve();
+            if (!config.writeRouteAfterCreated && !writeRoute) return Promise.resolve();
             const file = pathTool.join(config.appDir, 'app.json');
             return fs.readJSON(file)
                 .then((result) => {
@@ -108,14 +108,21 @@ exports.builder = function builder(yargs) {
             type: 'string',
             desc: '模板资源的目录',
             default: '',
+        })
+        .option('wr', {
+            alias: 'write-route',
+            type: 'boolean',
+            desc: '是否自动写入路由到 app.json',
+            default: false,
         });
 };
 
 exports.handler = function handler(argv) {
-    const { path, ts, sp } = argv;
+    const { path, ts, sp, wr } = argv;
     newPage({
         pagePath: path,
         templateSource: ts || _.get(config, 'templates.page.source'),
         subPkg: sp,
+        writeRoute: wr,
     });
 };
