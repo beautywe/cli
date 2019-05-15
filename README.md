@@ -1,6 +1,6 @@
 # BeautyWe CLI
 
-[![CircleCI](https://img.shields.io/circleci/project/github/beautywe/plugin-event/master.svg)](https://circleci.com/gh/beautywe/plugin-event)
+[![CircleCI](https://img.shields.io/circleci/project/github/beautywe/cli/master.svg)](https://circleci.com/gh/beautywe/cli)
 [![NPM Version](https://img.shields.io/npm/v/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli) 
 [![NPM Downloads](https://img.shields.io/npm/dm/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli)
 
@@ -230,3 +230,8 @@ run 命令底层是调用了 gulp 任务。
     "appDir": "src"
 }
 ```
+
+# License
+This project is licensed under the [MIT license](LICENSE).
+
+Copyright (c) JerryC Huang (huangjerryc@gmail.com)
