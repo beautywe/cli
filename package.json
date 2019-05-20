@@ -1,6 +1,6 @@
 {
   "name": "@beautywe/cli",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "CLI for beautywe",
   "main": "index.js",
   "bin": {
@@ -24,7 +24,7 @@
   "author": "JerryC8080 (huangjerryc@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "@beautywe/framework": "^0.1.0",
+    "@beautywe/framework": "^1.0.0",
     "find-up": "^3.0.0",
     "fs-extra": "^7.0.1",
     "inquirer": "^6.2.1",
