@@ -1,8 +1,8 @@
 # BeautyWe CLI
 
-[![CircleCI](https://circleci.com/gh/beautywe/cli/tree/master.svg?style=svg)](https://circleci.com/gh/beautywe/cli/tree/master)
-
-[![NPM Version](https://img.shields.io/npm/v/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli) [![NPM Downloads](https://img.shields.io/npm/dm/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli)
+[![CircleCI](https://img.shields.io/circleci/project/github/beautywe/cli/master.svg)](https://circleci.com/gh/beautywe/cli)
+[![NPM Version](https://img.shields.io/npm/v/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli) 
+[![NPM Downloads](https://img.shields.io/npm/dm/@beautywe/cli.svg)](https://www.npmjs.com/package/@beautywe/cli)
 
 ## 介绍
 
@@ -345,3 +345,8 @@ MyPage({
 | 变量名 | 说明 |
 | --------- | --------- | 
 | name | 插件，如 `/plugins/abc.js` 的插件名为 `abc` |
+
+# License
+This project is licensed under the [MIT license](LICENSE).
+
+Copyright (c) JerryC Huang (huangjerryc@gmail.com)
