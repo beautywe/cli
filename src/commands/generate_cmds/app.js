@@ -64,20 +64,6 @@ exports.handler = function handler() {
             logger.success(`生成文件：${item.targetPath.replace(config.projectDir, '')}`);
         }))
 
-        // 新建页面
-        .then(() => {
-            const pageDir = config.templates.page.defaultOutput.replace(config.projectDir, '');
-            const targetDir = nodePath.join(process.cwd(), `/${answers.appName}/${pageDir}/home`);
-            templates.render({
-                type: 'page',
-                targetDir,
-                params: {
-                    name: 'home',
-                    route: 'pages/home/index',
-                },
-            });
-        })
-
         .then(() => logger.success('应用已创建完成'))
 
         .catch((err) => {
